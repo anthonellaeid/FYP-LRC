@@ -1,0 +1,15 @@
+<?php  
+$connect = mysqli_connect("localhost", "root", "", "lrc");
+	$id=htmlspecialchars($_POST['uhf_radio_id']);
+	$id=mysqli_real_escape_string($connect,$id);
+$sql = "INSERT INTO `uhf_radio`(`uhf_radio_id`) VALUES ('".$_POST['uhf_radio_id']."');";  
+if(mysqli_query($connect, $sql))  
+{  
+     echo 'Data Inserted';  
+} 
+else {echo "Error";} 
+ ?>
+
+			
+			
+		

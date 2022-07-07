@@ -1,0 +1,12 @@
+<?php  
+	$connect = mysqli_connect("localhost", "root", "", "lrc");
+ 	$id=htmlspecialchars($_POST["id"]);
+	$id=mysqli_real_escape_string($connect,$id);	
+	$text = htmlspecialchars($_POST["text"]);  
+	$column_name = htmlspecialchars($_POST["column_name"]);  
+	$sql = "UPDATE city SET ".$column_name."='".$text."' WHERE city_id ='".$id."'";  
+	if(mysqli_query($connect, $sql))  
+	{  
+		echo 'Data Updated';  
+	}  
+ ?>

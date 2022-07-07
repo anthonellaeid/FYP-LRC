@@ -1,0 +1,15 @@
+<?php  
+$connect = mysqli_connect("localhost", "root", "", "lrc");
+ 	$cm_id=htmlspecialchars($_POST["cm_kit_id"]);
+	$cm_id=mysqli_real_escape_string($connect,$id);
+$sql = "INSERT INTO `cm_kit`(`cm_kit_id`) VALUES ('".$_POST['']."');";  
+if(mysqli_query($connect, $sql))  
+{  
+     echo 'Data Inserted';  
+} 
+else {echo "Error";} 
+ ?>
+
+			
+			
+		

@@ -1,0 +1,11 @@
+<?php  
+	$connect = mysqli_connect("localhost", "root", "", "lrc");
+	$id=htmlspecialchars($_Post["id"]);
+	$id=mysqli_real_escape_string($connect,$id);
+	$sql = "DELETE FROM medical_case WHERE medicalCase_code  = '".$_POST["id"]."'";  
+	if(mysqli_query($connect, $sql))  
+	{  
+		echo 'Data Deleted';  
+	}  
+ ?>
+ 		

@@ -1,0 +1,11 @@
+<?php  
+	$connect = mysqli_connect("localhost", "root", "", "lrc");
+	$id = $_POST["id"];  
+	$text = $_POST["text"];  
+	$column_name = $_POST["column_name"];  
+	$sql = "UPDATE cm_kit SET ".$column_name."='".$text."' WHERE cm_kit_id ='".$id."'";  
+	if(mysqli_query($connect, $sql))  
+	{  
+		echo 'Data Updated';  
+	}  
+ ?>

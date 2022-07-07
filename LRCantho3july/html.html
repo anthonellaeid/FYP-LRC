@@ -1,0 +1,98 @@
+<html>
+  <head>
+<style>
+  /* Popup container - can be anything you want */
+.popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: yellow;
+        color: red;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        top:10%;
+        
+        /* bottom: 125%;
+        left: 70%;
+        margin-left: -80px; */
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        /* top: 100%;
+        left: 70%;
+        margin-left: 14px; */
+        /* margin-left: 5%;  */
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+         .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;} 
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        } */
+
+  </style>
+
+  </head>
+    <body>
+	<!--<form method="post" target="_blank">-->
+    <form method="POST" action="">
+		<textarea class="title1"></textarea>	
+
+		<button type= "submit" onclick='check()'>check</button></form>
+    <div class="popup" >
+      <span class="popuptext" id="myPopup">
+       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i><b>&emsp;Wrong username</b></span>
+ </div>
+    </body>
+</html>
+<script>
+
+function check(event){
+  
+const textarea = document.querySelector('.title1');
+  if (textarea.value=="") {
+    alert('empty');
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+   event.preventDefault();
+ //other stuff you want to do instead...
+	textarea.value="Ola";
+
+  }else{alert('NOT EMPTY');textarea.value="";}
+
+
+                 
+  
+}
+</script>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+	<!--<form method="post" target="_blank">-->
+		<textarea class="title1"></textarea>
+		
+		<button onclick='check()'>check</button>
+    </body>
+</html>
+<script>
+
+function check(){
+const textarea = document.querySelector('.title1');
+  if (textarea.value=="") {
+    alert('empty');
+	textarea.value="Ola";
+  }else{alert('NOT EMPTY');textarea.value="";}
+  
+}
+</script>

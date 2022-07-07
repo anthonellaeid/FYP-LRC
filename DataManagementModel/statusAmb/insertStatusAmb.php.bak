@@ -1,0 +1,13 @@
+<?php  
+$connect = mysqli_connect("localhost", "root", "", "lrc");
+$sql = "INSERT INTO `ambulance_status`(`ambulanceStatus_desc`) VALUES ('".$_POST['ambulanceStatus_desc']."');";  
+if(mysqli_query($connect, $sql))  
+{  
+     echo 'Data Inserted';  
+} 
+else {echo "Error";} 
+ ?>
+
+			
+			
+		
